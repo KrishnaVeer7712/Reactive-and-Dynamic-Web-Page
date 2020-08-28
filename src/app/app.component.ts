@@ -10,6 +10,7 @@ import { CustomValidators } from './custom-validators';
 export class AppComponent {
   public frmSignup: FormGroup;
   public message = "Congrats you have successfully created your account";
+  options={};
 
   constructor(private fb: FormBuilder) {
     this.frmSignup = this.createSignupForm();
@@ -67,6 +68,10 @@ export class AppComponent {
     // do signup or something
     console.log(this.frmSignup.value);
     alert(this.message);
+  }
+  
+  handleClick() {
+    console.log(this.frmSignup.value);
   }
 
 }
